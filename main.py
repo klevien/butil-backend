@@ -48,7 +48,7 @@ def calculate_yield(rainfall: float, fertilizer: float, ph: float):
     }
 
 @app.get("/")
-async def home():
+def root():  # Change to sync
     return {"message": "BUTIL API + MongoDB Running!"}
 
 @app.post("/predict", response_model=PredictOut)
